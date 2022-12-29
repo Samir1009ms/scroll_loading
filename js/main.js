@@ -24,21 +24,24 @@ function hidden (){
     
     // gif.classList.add("hidden")
     gif.setAttribute("style","display:none")
+    console.log("else func")
 }
 
 let cons = 0
 window.addEventListener("scroll", () => {
-    console.log("window.screenY", window.scrollY)
-    console.log("window.innerHeight", window.innerHeight)
-    console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight)
+    // console.log("window.screenY", window.scrollY)
+    // console.log("window.innerHeight", window.innerHeight)
+    // console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight)
     if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight && vol) {
         vol=false
         // gif.classList.remove("hidden")
         gif.setAttribute("style","display:block")
-        setTimeout(()=>loading(10,window.scrollY), 4000)        
+        setTimeout(()=>loading(10,window.scrollY), 4000)     
+        console.log("true")   
     }else if(vol){
         gif.setAttribute("style","display:block")
         setTimeout(hidden,6000)
+        console.log("else")
     }
 })
 
