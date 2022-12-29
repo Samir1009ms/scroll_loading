@@ -35,7 +35,7 @@ window.addEventListener("scroll", () => {
         vol=false
         // gif.classList.remove("hidden")
         gif.setAttribute("style","display:block")
-        setTimeout(()=>loading(10,window.scrollY), 5000)        
+        setTimeout(()=>loading(10,window.scrollY), 4000)        
     }else if(vol){
         setTimeout(hidden,6000)
     }
