@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+img {
+    margin: 5px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gif{
+    width: 20%;
+    height: 170px;
+    position: absolute;
+    bottom: -233px;
+    left: 45%;
+    color: white;
+    transition: calc(0.45s); 
+    &:hover{
+    transform: scale(1.109);
+    transition: calc(0.45s);
+    }
+}
+
+.hidden{
+
+display: none;}
