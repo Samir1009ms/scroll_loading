@@ -1,5 +1,5 @@
 const container = document.querySelector(".container")
-let vol
+let vol=true
 function loading(say = 10,pozisya=0) {
     let i = 0
 
@@ -37,6 +37,7 @@ window.addEventListener("scroll", () => {
         gif.setAttribute("style","display:block")
         setTimeout(()=>loading(10,window.scrollY), 4000)        
     }else if(vol){
+        gif.setAttribute("style","display:block")
         setTimeout(hidden,6000)
     }
 })
