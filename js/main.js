@@ -1,6 +1,6 @@
 const container = document.querySelector(".container")
 let vol
-function loading(say = 10,pozisya=3) {
+function loading(say = 10,pozisya=0) {
     let i = 0
 
     while (i < say) {
@@ -21,8 +21,9 @@ loading()
 const gif = document.querySelector(".gif")
 
 function hidden (){
-
-        gif.classList.add("hidden")
+    
+    // gif.classList.add("hidden")
+    gif.setAttribute("style","display:none")
 }
 
 let cons = 0
@@ -32,22 +33,12 @@ window.addEventListener("scroll", () => {
     console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight)
     if ((window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight && vol) {
         vol=false
-        gif.classList.remove("hidden")
-        setTimeout(()=>loading(10,window.scrollY), 4000)          
+        // gif.classList.remove("hidden")
+        gif.setAttribute("style","display:block")
+        setTimeout(()=>loading(10,window.scrollY), 5000)        
     }else if(vol){
-        setTimeout(hidden,7000)
+        setTimeout(hidden,6000)
     }
-    
-    // else{
-    //     
-    // }
-    
-    // else if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-        
-    // }
-
-
-
 })
 
 

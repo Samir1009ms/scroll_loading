@@ -13,11 +13,11 @@ img {
 }
 
 .gif {
-  width: 20%;
+  width: 27%;
   height: 170px;
   position: absolute;
-  bottom: -233px;
-  left: 45%;
+  bottom: -140px;
+  left: 36%;
   color: white;
   transition: 0.45s;
 }
